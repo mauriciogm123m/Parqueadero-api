@@ -1,13 +1,23 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const vehiculoRoutes = require('./routes/VehiculoRoutes');
+const sequelize = require('./config/Bd');
 
-app.use(express.json()); // interpretar json para las solicitudes
+// Middleware para el parseo de JSON
+app.use(express.json());
 
-const VehiculoRoutes = require('./routes/VehiculoRoutes'); // importamos las rutas
-app.use('/api/vehiculos', VehiculoRoutes);
+// Rutas
+app.use('/api/vehiculo', vehiculoRoutes);
 
-// iniciar el servidor
-app.listen(port, () => {
-    console.log(`Servidor corriendo en el puerto ${port}`);
-});
+// Sincronizar con la base de datos
+sequelize.sync()
+    .then(() => {
+        console.log('Base de datos conectada');
+        // Iniciar el servidor
+        app.listen(3000, () => {
+            console.log('Servidor corriendo en http://localhost:3000');
+        });
+    })
+    .catch((error) => {
+        console.error('Error al conectar con la base de datos:', error);
+    });
