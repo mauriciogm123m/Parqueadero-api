@@ -6,14 +6,12 @@ Esta es una API REST desarrollada para gestionar un parqueadero que acepta motos
 ## Características
 - **Gestión de Vehículos**: Permite registrar, consultar, actualizar y eliminar vehículos.
 - **Control de Cupos**: Limita la cantidad de vehículos en el parqueadero a 5 carros y 10 motos.
-- **Documentación**: Incluye documentación de la API utilizando Swagger.
 
 ## Tecnologías Utilizadas
 - Node.js
 - Express.js
 - Sequelize (para la conexión con MySQL)
 - MySQL
-- Swagger UI (opcional para la documentación)
 
 ## Instalación
 1. Clona este repositorio en tu máquina local:
