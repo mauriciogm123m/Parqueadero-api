@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "e3dd3987-0463-4bd4-aeb1-236086d24837",
+		"name": "Add",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26689297"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/vehiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipo\": \"carro\",\r\n  \"placa\": \"NEW117\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/vehiculo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
